@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simran Kumari | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:linear-gradient(135deg,#0f172a,#020617);color:#fff}
+
+/* HEADER */
+header{
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+}
+header h1{color:#38bdf8}
+header p{font-size:12px;color:#cbd5f5}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#fff;
+}
+nav a:hover{color:#38bdf8}
+
+/* SECTIONS */
+section{padding:80px 60px}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:80vh;
+}
+.hero h2{font-size:48px}
+.hero span{color:#38bdf8}
+.hero p{margin-top:10px;color:#cbd5f5}
+
+/* IMAGE CIRCLE */
+.hero-img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  border:3px solid #38bdf8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#38bdf8;
+  padding:12px 25px;
+  border-radius:8px;
+  color:black;
+  text-decoration:none;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+}
+.btn:hover{
+  background:#0ea5e9;
+  color:white;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:16px;
+  margin-top:20px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  background:rgba(255,255,255,0.08);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:20px;
+}
+#about p{
+  color:#cbd5f5;
+  line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  color:#94a3b8;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero{flex-direction:column;text-align:center}
+  .hero-img{margin-top:20px}
+  header{padding:20px}
+  section{padding:60px 20px}
+}
+
+/* POPUP */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:1000;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+}
+.modal img{
+  max-width:80%;
+  max-height:80%;
+  border-radius:10px;
+}
+.modal span{
+  position:absolute;
+  top:20px;
+  right:40px;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Simran Kumari</h1>
+    <p>Aspiring Software Engineer</p>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Hi, I'm <span>Simran</span> 👋</h2>
+    <p>Passionate about building real-world applications using Web Development, DSA, and Machine Learning.</p>
+
+    <a href="#contact" class="btn">Hire Me</a>
+    <a href="resume.pdf" class="btn" download style="margin-left:10px;">⬇ Resume</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="images/picc.jpeg" alt="profile">
+  </div>
+</section>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card" style="text-align:center;">
+    
+    <img src="images/picc.jpeg" width="120" style="border-radius:50%; margin-bottom:15px;">
+
+    <p>
+      I am a second-year student pursuing a Bachelor of Engineering in Computer Science and Engineering.My academic journey has provided me with a strong foundation in computer science principles,including DSA,C,C++,Java and Web Development.
+    </p>
+
+  </div>
+</section>
+</section>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML, CSS, JavaScript</div>
+    <div class="card">C, C++, Java</div>
+    <div class="card">Data Structures & Algorithms</div>
+    <div class="card">Machine Learning Basics</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Suicidal Tendency Prediction</h3>
+      <p>Machine learning model to predict mental health risks.</p>
+      <p><b>Tech:</b> Python, Pandas, Scikit-learn</p>
+      <a href="https://github.com/SIMRANKUMARI11/Suicidal-Tendency-using-ML/" target="_blank" class="btn">GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>Trash 2 Cash</h3>
+      <p>Smart recycling reward system concept.</p>
+      <p><b>Tech:</b> IoT Concept, UI Design</p>
+      <button class="btn" onclick="openModal()">Details</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="modal">
+  <span onclick="closeModal()">&times;</span>
+  <img src="images/Trash2Cash.png">
+</div>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: simran1647.be24@chitkarauniversity.edu.in</p>
+    <p>
+      <a href="https://github.com/SIMRANKUMARI11" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/-simrankumari/" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Simran Kumari | All Rights Reserved</p>
+</footer>
+
+<script>
+function openModal(){
+  document.getElementById("popup").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
